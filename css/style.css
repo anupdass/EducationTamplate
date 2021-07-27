@@ -1,0 +1,275 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url('/imgaes/casey-horner-O0R5XZfKUGQ-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.nav{
+    display: flex;
+    padding: 2%;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-item a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+}
+.nav-item a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: tomato;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.nav-item a:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+    
+}
+.text-box h1{
+    font-size: 50px;
+    line-height: 80px;
+}
+.btn{
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: tomato;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.menu{
+    display: none;
+}
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: tomato;
+}
+.course-title h3{
+    text-align: center;
+    margin: 40px 0px;
+    font-size: 40px;
+}
+.courses{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+.course{
+    width: 80%;
+    margin: 0px 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(248, 193, 193);
+    border-radius: 5px;
+
+}
+.course h2,h5,p{
+    text-align: center;
+    margin: 10px;
+    
+}
+.course:hover{
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.campus-title h2,p{
+    text-align: center;
+    margin-top: 10px;
+}
+.campus-title{
+    margin-bottom: 30px;
+}
+
+.campus{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.campus-image{
+    width: 30%;
+    height: 500px;
+    background-color: red;
+    border-radius: 5px;
+    position: relative;
+    transition: 1s ;
+    cursor: pointer;
+    overflow: hidden;
+}
+.campus-name{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.514);
+    position: absolute;
+    transition: 1s;
+    text-align: center;  
+    color: black; 
+    bottom: -300px;
+    position: relative;
+}
+.campus-name h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.campus-image:hover .campus-name{
+    bottom: 0px;
+}
+
+
+.facility-titile {
+    margin: 40px;
+}
+
+.facility-titile h2,p{
+    text-align: center;
+}
+
+.facilities{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.facility{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.facility h3{
+    margin: 10px 0px;
+}
+
+.enroll-main{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    height: 200px;
+}
+
+.enroll{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 100%;
+    margin: 20px;
+    background-color: aqua;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+@media (max-width:700px){
+    .text-box h1{
+        font-size: 20px;
+        line-height: 30px;
+        padding: 0;
+        margin: 0;
+    }
+    .text-box p{
+        font-size: 14px;
+        color: rgb(168, 167, 167);
+    }
+    .btn{
+        margin-top: 20px;
+        padding: 5px 20px;
+        font-size: 15px;
+        text-transform: uppercase;
+        transition: 0.5s;
+    }
+    .nav-item{
+        position: fixed;
+        display:flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 50%;
+        right: -400px;
+        top: 0;
+        background-color: yellowgreen;
+        z-index: 2;
+        transition: 1s;  
+    }
+    .nav-item a{
+        top: 20%;
+        font-size: 20px;
+    }
+
+    .menu{
+        height: 30px;
+        width: 30px;
+        z-index: 5;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .change .nav-item{
+        right: 0px;
+    }
+    .change .line-1{
+        transform: rotate(45deg)
+        translate(7px,5px) ;
+        transition: 1s;
+    }
+    .change .line-2{
+        visibility: hidden;
+        opacity: 0;
+     }
+    .change .line-3{
+        transform: rotate(-45deg)
+        translate(7px,-5px) ;
+        transition: 1s;
+    }
+
+    
+}
